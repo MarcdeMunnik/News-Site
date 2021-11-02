@@ -1,0 +1,51 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+.navbar{
+    background-color: aqua;
+    padding: 15px 80px;
+}
+
+.navbar ul li{
+    display: inline-block;
+    color: black;
+    text-decoration: none;
+    margin-right: 5px;
+}
+
+.navbar ul li a{
+    color: black;
+    text-decoration: none;
+    font-size: 2rem;
+    padding: 5px 10px;
+    transition: 0.4s;
+    border-radius: 10px;
+    
+}
+
+.navbar ul li a:hover{
+    background-color: rgba(9, 187, 187, 0.5);
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    
+  }
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    padding: 12px 0;
+    border-radius: 5px;
+    border: 1px solid black;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
