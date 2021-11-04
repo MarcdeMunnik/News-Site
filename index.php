@@ -21,20 +21,24 @@ require("db.php");
         <ul>
             <?php
             $pages = array("Nieuws", "Sport");
+            $subpaginas = array(
+                array("Voorpagina", "Laatste Nieuws", "Video's", "Binnenland"),
+                array("Voorpagina", "Video's", "Voetbal")
+            );
             for ($i = 0; $i < count($pages); $i++) {
-                echo "<li>
-                        <div class=\"dropdown\">
-                        <a href=\" \">" . $pages[$i] . "
-                            <i class=\"bi bi-chevron-down\" style=\"font-size: 0.5em; margin-left: 4px;\"></i>
-                        </a>
-                        <div class=\"dropdown-content\">
-                            <div class=\"dropdown-item\">
-                                <a>hello</a>
-                                <a>test</a>
-                            </div>
-                        </div>
-                        </div>
-                    </li>";
+                echo "<li>";
+                echo "<div class=\"dropdown\">";
+                echo "<a href=\"\">" . $pages[$i] . "";
+                echo "<i class=\"bi bi-chevron-down\" style=\"font-size: 0.5em; margin-left: 4px;\"></i>";
+                echo "</a>";
+                echo "<div class=\"dropdown-content\">"; 
+                echo "<ol>";
+                for ($a=0; $a < count($subpaginas[$i]); $a++) {
+                    echo "<li><a href=\"\">" . $subpaginas[$i][$a] . "</a></li>";  
+                }  
+                echo "</ol>";
+                echo "</div>";
+                echo "</li>";
             }
             ?>
         </ul>
